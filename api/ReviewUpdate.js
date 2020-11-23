@@ -26,6 +26,7 @@ app.post("/NewReviews",function(req,res){
 
     const newReview = new Reviews({
         senderEmail: req.body.email,
+        senderName: req.body.name,
         locationName: req.body.locationName,
         rating: req.body.rating,	
         review: req.body.review
@@ -34,5 +35,5 @@ app.post("/NewReviews",function(req,res){
     newReview.save(function(err){
         if(err) console.log(err);
         else res.send("Thanks for your review");
-    })
+    })s
 });
